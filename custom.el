@@ -55,7 +55,7 @@
 ;   C-x r m/l/b               set/list/jump-to bookmark
 ;   C-x r s/i                 store region in register/insert content of register
 ;   C-x r SPC/j               store point in register/jump to register
-
+;
 ;   C-SPC/C-g                 set mark/cancel mark
 ;   C-u C-SPC                 jump to last mark
 ;   C-x C-x                   exchange point and mark, reactive last region
@@ -64,13 +64,13 @@
 ;;; search
 ;   C-s/r                     search forward/backward
 ;   C-M-s/r                   search forward/backward by regexp
-;   M-n/p                     move to next/previous item in search history
 ;   C-s C-s/C-r C-r           begin last search string
-;
+;;   以下明令用于改变 搜索内容
+;   M-n/p                     move to next/previous item in search history
 ;   C-w                       add word at point to search string
 ;   C-M-y                     add character at point to search string
 ;   C-y                       yank from clipbord to search string
-;
+;    以下命令开启occur搜索模式，即搜索结果存放在单独的buffer中
 ;   M-x occur/M-s o           open the occur mode(give search res in another buffer)
 ;   M-n/p                     goto next/previous occurrence
 ;   g                         revert buffer, refresh search result
