@@ -34,9 +34,7 @@
 ;  激活ibuffer，更灵活的缓存操作
 (require 'init-ibuffer)
 
-;  激活visual line操作
-(setq global-visual-line-mode t)
-
+2
 ;;;; 加载自定义全局变量
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)

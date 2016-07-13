@@ -30,6 +30,14 @@
 
 ;;; 快速移动
 ;   M-m                       移动到当前行第一个非空白字符
+;   C-M-a/e                   move to begin/end of defun
+;   C-M-f/b                   move forward/backward by s-expressions(include string or brackets)
+;   C-M-v                     scroll down other window
+;   C-M-S-v                   scroll up other window
+;   C-x </>                   scroll left/right
+;   C-x ]/[                   move forward/backward one page
+;   M-}/{                     move forward/backward to end/start of paragraph
+;   M-</>                     move to begin/end of buffer
 
 ;;; 窗口指令
 ;   C-x 0                     删除当前活动窗口
@@ -41,24 +49,33 @@
 ;   C-x 4 b                   在其他窗口打开buffer
 ;   C-x 4 C-o                 在其他窗口打开buffer，但custor仍在当前窗口
 
+;;;; delete useless buffer/bar
 (tool-bar-mode -1)                             ; No toolbar
 (menu-bar-mode -1)                             ; No menubar
 (setq inhibit-startup-message t)               ; No message at startup
+
+;;;; display line num
 (column-number-mode t)                         ; Show column number in mode-line
-(setq make-backup-files nil)                   ; No backup files ~
 (global-linum-mode 1)                          ; Show line numbers on buffers
+
+;;;; move between window faster
+(windmove-default-keybindings)                 ; switch windows with shift key, by S-<left>/<right>/<up>/<down>
+(global-set-key (kbd "M-o") 'other-window)
+(setq global-visual-line-mode t)               ; 激活visual line操作
+
+;;;; Other
+(Setq Make-backup-files nil)                   ; No backup files ~
 (show-paren-mode 1)                            ; Highlight parenthesis pairs
 (setq pop-up-frame t)                          ; Buffers in separate frames
 (icomplete-mode t)                             ; Completion in mini-buffer
 (setq undo-limit 100000)                       ; Increase number of undo
 (desktop-save-mode nil)                        ; Save session before quitting, 保留上次打开的buffer
+(setq confirm-kill-emacs 'yes-or-no-p)         ; Confirm quit
+(setq read-file-name-completion-ignore-case 't); Ignore case when completing file names
 (setq apropos-sort-by-scores t)                ; Apropos can sort results by relevancy
 ;(setq-default indent-tabs-mode nil)           ; Use spaces instead of tabs
 ;(setq tab-width 4)                            ; Length of tab is 4 SPC
 
-;;; 重绑定常用快捷键
-;   在窗口之间移动
-(global-set-key (kbd "M-o") 'other-window)
 
 (provide 'custom)
 
