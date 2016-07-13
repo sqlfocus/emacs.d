@@ -1,3 +1,4 @@
 *.~undo-tree~
 .emacs.desktop
 smex-items
+bookmarks

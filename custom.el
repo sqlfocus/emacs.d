@@ -49,6 +49,34 @@
 ;   C-x 4 b                   在其他窗口打开buffer
 ;   C-x 4 C-o                 在其他窗口打开buffer，但custor仍在当前窗口
 
+;;; bookmark and register
+;   C-x r m/l/b               set/list/jump-to bookmark
+;   C-x r s/i                 store region in register/insert content of register
+;   C-x r SPC/j               store point in register/jump to register
+
+;   C-SPC/C-g                 set mark/cancel mark
+;   C-u C-SPC                 jump to last mark
+;   C-x C-x                   exchange point and mark, reactive last region
+;   C-M-h/SPC|@               mark the next fun/s-expression(string or brackets)
+   
+;;; search
+;   C-s/r                     search forward/backward
+;   C-M-s/r                   search forward/backward by regexp
+;   M-n/p                     move to next/previous item in search history
+;   C-s C-s/C-r C-r           begin last search string
+;
+;   C-w                       add word at point to search string
+;   C-M-y                     add character at point to search string
+;   C-y                       yank from clipbord to search string
+;
+;   M-x occur/M-s o           open the occur mode(give search res in another buffer)
+;   M-n/p                     goto next/previous occurrence
+;   g                         revert buffer, refresh search result
+;   q                         quit occur mode
+;   e                         switch to occur edit mode
+;   C-c C-c                   exit occur edit mode and apply changes
+;   M-g M-n/M-g M-p           jump to next/previous "match"
+
 ;;;; delete useless buffer/bar
 (tool-bar-mode -1)                             ; No toolbar
 (menu-bar-mode -1)                             ; No menubar
@@ -64,7 +92,7 @@
 (setq global-visual-line-mode t)               ; 激活visual line操作
 
 ;;;; Other
-(Setq Make-backup-files nil)                   ; No backup files ~
+(setq Make-backup-files nil)                   ; No backup files ~
 (show-paren-mode 1)                            ; Highlight parenthesis pairs
 (setq pop-up-frame t)                          ; Buffers in separate frames
 (icomplete-mode t)                             ; Completion in mini-buffer
