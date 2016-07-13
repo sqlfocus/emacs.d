@@ -25,10 +25,12 @@
 ;   F10                       激活Menu bar
 ;   C-x C-w                   保存buffer到另一个文件，另存为
 ;   C-x k                     关闭某个buffer
+;   C-x d/C-d                 list/find the directory
 ;   M-x customize-themes      定制颜色方案
 ;   M-x eval-buffer           执行当前buffer
 
 ;;; 快速移动
+;   M-g M-g                   go to line
 ;   M-m                       移动到当前行第一个非空白字符
 ;   C-M-a/e                   move to begin/end of defun
 ;   C-M-f/b                   move forward/backward by s-expressions(include string or brackets)
