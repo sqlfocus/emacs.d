@@ -8,8 +8,8 @@
 (require 'init-package)
 
 ; 命令行联想功能
-(require 'init-ido)
-(require 'init-smex)
+;(require 'init-ido)
+;(require 'init-smex)
 (require 'init-helm)
 
 ; undo撤销操作以树的方式呈现，更直观
