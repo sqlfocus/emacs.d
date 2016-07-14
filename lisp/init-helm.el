@@ -46,6 +46,10 @@
 ;    M-U                                     按照用户名称排序
 ;    M-M                                     按照内存占用排序
 
+;;; 搜索minibuffer自动用当前选中项补全
+; C-j
+
+
 (provide 'init-helm)
 
 ;;; init-helm.el ends here

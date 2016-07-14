@@ -30,24 +30,24 @@
 
 
 ;;;; Key          Command
-;;(setq helm-gtags-prefix-key "\C-c")
-;; Prefix C-]   helm-gtags-find-tag-from-here
+;;(setq helm-gtags-prefix-key "\C-c")              ; 默认绑定键
+;; C-]          helm-gtags-find-tag-from-here      ; 查找定义
 ;; C-x 4 .      helm-gtags-find-tag-other-window
 ;
-;; Prefix t     helm-gtags-find-tag
+;; Prefix t     helm-gtags-find-tag                ; 查找定义
 ;; Prefix d     helm-gtags-find-tag
 ;; M-.          helm-gtags-find-tag
 ;
-;; Prefix r     helm-gtags-find-rtag
+;; Prefix r     helm-gtags-find-rtag               ; 查找reference的地方
 ;; Prefix g     helm-gtags-find-pattern
 ;
-;; Prefix s     helm-gtags-find-symbol
+;; Prefix s     helm-gtags-find-symbol             ; 查找符号
 ;
-;; Prefix C-t   helm-gtags-pop-stack
+;; C-t          helm-gtags-pop-stack               ; 返回
 ;; M-,          helm-gtags-pop-stack
 ;
 ;; Prefix P     helm-gtags-find-files
-;; Prefix f     helm-gtags-parse-file
+;; Prefix f     helm-gtags-parse-file              ; 列举当前文件所有的tag
 ;
 ;; Prefix h     helm-gtags-display-browser
 

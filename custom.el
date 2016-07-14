@@ -26,8 +26,22 @@
 ;   C-x C-w                   保存buffer到另一个文件，另存为
 ;   C-x k                     关闭某个buffer
 ;   C-x d/C-d                 list/find the directory
+;   C-x C-u/C-l               激活区域全大写/小写
 ;   M-x customize-themes      定制颜色方案
 ;   M-x eval-buffer           执行当前buffer
+;   M-c/u/l                   下个单词首字母大写/全大写/全小写
+
+;;; 删除指令
+;   C-M-k                     kill s-expression
+;   C-M-w                     append kill，如果下一个指令为kill，则被kill的部分后挂到上一次kill的结果上，
+					;                                 这样，多次kill的结果可以当作一个整体使用???
+;   C-t                       交换光标所在的字符和前一个字符
+;   C-w                       剪切选中区域
+;   M-k                       kill sentence
+;   M-t                       交换光标所在两端的单词
+;   M-w                       拷贝选中区域到kill ring
+;   M-y                       在当前插入点循环替换为kill ring
+
 
 ;;; 快速移动
 ;   M-g M-g                   go to line
@@ -64,6 +78,8 @@
 ;;; search
 ;   C-s/r                     search forward/backward
 ;   C-M-s/r                   search forward/backward by regexp
+;   M-%                       search and replace
+;   C-M-%                     regexp search and replace
 ;   C-s C-s/C-r C-r           begin last search string
 ;;   以下明令用于改变 搜索内容
 ;   M-n/p                     move to next/previous item in search history
@@ -105,6 +121,8 @@
 (setq apropos-sort-by-scores t)                ; Apropos can sort results by relevancy
 ;(setq-default indent-tabs-mode nil)           ; Use spaces instead of tabs
 ;(setq tab-width 4)                            ; Length of tab is 4 SPC
+(if (version< emacs-version "24.4")            ; 换行自动缩进
+    (global-set-key (kbd "<RET>") 'newline-and-indent))
 
 
 (provide 'custom)
