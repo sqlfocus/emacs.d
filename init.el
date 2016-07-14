@@ -18,6 +18,8 @@
 ; 激活ibuffer，更灵活的缓存操作
 (require 'init-ibuffer)
 
+; 定制c/c++/java代码阅读器
+(require 'init-helm-gtags)
 
 ;;;; 加载自定义全局变量
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
