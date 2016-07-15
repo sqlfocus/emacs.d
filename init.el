@@ -21,6 +21,9 @@
 ; 定制c/c++/java代码阅读器
 (require 'init-helm-gtags)
 
+; 定制c mode
+(require 'init-c-mode)
+
 ;;;; 加载自定义全局变量
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)

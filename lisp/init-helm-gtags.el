@@ -24,7 +24,7 @@
     helm-gtags-path-style 'relative
     helm-gtags-use-input-at-cursor   t
     helm-gtags-pulse-at-cursor       t
-    helm-gtags-suggested-key-mapping t
+    ;helm-gtags-suggested-key-mapping t
     helm-gtags-ignore-case t
     helm-gtags-auto-update t)
 
