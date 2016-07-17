@@ -20,6 +20,7 @@
 
 ; 定制c/c++/java代码阅读器
 (require 'init-helm-gtags)
+(require 'init-company)
 
 ; 定制c mode
 (require 'init-c-mode)
