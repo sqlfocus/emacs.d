@@ -8,6 +8,10 @@
 (helm-mode 1)
 (helm-autoresize-mode 1)
 
+;;; 绑定的prefix key
+;(global-set-key (kbd "C-x c") 'helm-command-prefix)    ; default key bind
+;(global-set-key (kbd "C-c h") 'helm-command-prefix)    ; maybe used by myself
+
 ;;; 添加绑定
 (global-set-key (kbd "M-x") 'helm-M-x)
 (setq helm-M-x-fuzzy-match t)
@@ -20,26 +24,23 @@
 
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-s") 'helm-occur)
-(global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
-(global-set-key (kbd "C-c h x") 'helm-register)
-(global-set-key (kbd "C-x r b") 'helm-filtered-bookmarks)
-(global-set-key (kbd "C-c h") 'helm-command-prefix)
 
+;;; 默认设置
 (setq helm-split-window-in-side-p        t
     helm-move-to-line-cycle-in-source    t
     helm-ff-search-library-in-sexp       t
-    helm-locate-fuzzy-match              t   ; linux C-c h l/C-!
+    helm-locate-fuzzy-match              t   ; helm-locate
     helm-apropos-fuzzy-match             t
     helm-scroll-amount                   8
     helm-ff-file-name-history-use-recentf t)
 
-;;; commands
-; C-c h m                                调出man页面
-; C-c h /                                在当前目录搜索文件
-; C-u C-c h /                            在指定目录搜索文件
-; C-x C-f + C-c /                        搜索文件
-; C-c h l/C-!                            硬盘全局搜索文件/暂停或继续搜索
-; C-c h t                                调用linux top指令
+;;; 其他有用函数
+; helm-find                              在当前目录查找文件///prefix-key /
+;    C-c /                                   当前目录下模糊匹配
+; helm-locate                            在/根目录查找文件///prefix l
+; helm-apropos                           类似于M-x apropos，只不过所有的函数、命令等放到了一起
+; helm-man-woman                         调出man页面///prefix m
+; helm-top                               类似于linux的top指令
 ;    C-c C-u                                 刷新
 ;    M-C                                     按照 Shell command 排序
 ;    M-P                                     按照 CPU 使用率排序

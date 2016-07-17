@@ -115,7 +115,7 @@
 (setq pop-up-frame t)                          ; Buffers in separate frames
 (icomplete-mode t)                             ; Completion in mini-buffer
 (setq undo-limit 100000)                       ; Increase number of undo
-(desktop-save-mode nil)                        ; Save session before quitting, 保留上次打开的buffer
+;(desktop-save-mode nil)                        ; Save session before quitting, 保留上次打开的buffer
 (setq confirm-kill-emacs 'yes-or-no-p)         ; Confirm quit
 (setq read-file-name-completion-ignore-case 't); Ignore case when completing file names
 (setq apropos-sort-by-scores t)                ; Apropos can sort results by relevancy
