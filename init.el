@@ -18,6 +18,9 @@
 ; 激活ibuffer，更灵活的缓存操作
 (require 'init-ibuffer)
 
+; 窗口之间跳转
+(require 'init-window-number)
+
 ; 定制c/c++/java代码阅读器
 (require 'init-helm-gtags)
 (require 'init-company)

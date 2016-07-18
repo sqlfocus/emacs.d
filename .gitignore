@@ -4,3 +4,5 @@ smex-items
 bookmarks
 elpa/
 eshell/
+session.*
+auto-save-list/
