@@ -21,6 +21,9 @@
 ; 窗口之间跳转
 (require 'init-window-number)
 
+; 配色方案
+(require 'init-color-theme)
+
 ; 定制c/c++/java代码阅读器
 (require 'init-helm-gtags)
 (require 'init-company)
