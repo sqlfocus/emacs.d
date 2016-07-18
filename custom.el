@@ -30,6 +30,7 @@
 ;   M-x customize-themes      定制颜色方案
 ;   M-x eval-buffer           执行当前buffer
 ;   M-c/u/l                   下个单词首字母大写/全大写/全小写
+;   C-h m                     当前可执行的指令或快捷键，一般用在查找结果的buffer上，以寻求更多的操作
 
 ;;; 删除指令
 ;   C-M-k                     kill s-expression
