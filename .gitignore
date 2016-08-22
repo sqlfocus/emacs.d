@@ -6,3 +6,4 @@ elpa/
 eshell/
 session.*
 auto-save-list/
+\#*#
