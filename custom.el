@@ -107,10 +107,10 @@
 
 ;;;; move between window faster
 (windmove-default-keybindings)                 ; switch windows with shift key, by S-<left>/<right>/<up>/<down>
-(global-set-key (kbd "M-o") 'other-window)
 (setq global-visual-line-mode t)               ; 激活visual line操作
 
 ;;;; Other
+(setq x-select-enable-clipboard t)             ; 把x的剪切板和emacs联系起来
 (setq Make-backup-files nil)                   ; No backup files ~
 (show-paren-mode 1)                            ; Highlight parenthesis pairs
 (setq pop-up-frame t)                          ; Buffers in separate frames
