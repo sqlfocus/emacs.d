@@ -124,6 +124,17 @@
 (if (version< emacs-version "24.4")            ; 换行自动缩进
     (global-set-key (kbd "<RET>") 'newline-and-indent))
 
+;;;; Emacs一键格式化
+;;    C-x-h                         选定整个文件
+;;    C-M-\  <==> indent-region     格式化选定的代码
+(defun indent-buffer ()
+  "Indent the whole buffer."
+  (interactive)
+  (save-excursion
+    (indent-region (point-min) (point-max) nil)))
+;;绑定到F7键
+(global-set-key [f7] 'indent-buffer)
+
 ;;;; 把x的剪切板和emacs联系起来(linux需要安装xsel, sudo apt-get install xsel)
 ;; http://hugoheden.wordpress.com/2009/03/08/copypaste-with-emacs-in-terminal/
 ;; I prefer using the "clipboard" selection (the one the
@@ -164,7 +175,6 @@
  ))
 
 (provide 'custom)
-
 
 
 
