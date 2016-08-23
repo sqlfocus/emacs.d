@@ -37,6 +37,9 @@
 ; 以语法单位伸缩选择区域
 (require 'init-expand-region)
 
+; 添加笔记插件org
+(require 'init-org)
+
 ;;;; 加载自定义全局变量
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
