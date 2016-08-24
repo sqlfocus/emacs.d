@@ -1,5 +1,8 @@
 ;; -*- coding: utf-8 -*-
 ;;
+;;;; 注意事项
+;;     1) emacs版本号>=24.4
+;;
 ;;;; 预安装的插件存放地         
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
@@ -39,6 +42,9 @@
 
 ; 添加笔记插件org
 (require 'init-org)
+
+; 高亮固定的列
+(require 'init-fci)
 
 ;;;; 加载自定义全局变量
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
