@@ -35,7 +35,7 @@
 ;;; 删除指令
 ;   C-M-k                     kill s-expression
 ;   C-M-w                     append kill，如果下一个指令为kill，则被kill的部分后挂到上一次kill的结果上，
-					;                                 这样，多次kill的结果可以当作一个整体使用???
+;                                 这样，多次kill的结果可以当作一个整体使用???
 ;   C-t                       交换光标所在的字符和前一个字符
 ;   C-w                       剪切选中区域
 ;   M-k                       kill sentence
