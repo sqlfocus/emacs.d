@@ -35,7 +35,7 @@
 (require 'init-c-mode)
 
 ; 定制拼音输入法
-(require 'init-chinese-pyim)
+; (require 'init-chinese-pyim)
 
 ; 以语法单位伸缩选择区域
 (require 'init-expand-region)
@@ -45,6 +45,9 @@
 
 ; 高亮固定的列
 (require 'init-fci)
+
+; go
+(require 'init-go)
 
 ;;;; 加载自定义全局变量
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
